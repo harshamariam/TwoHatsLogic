@@ -1,0 +1,29 @@
+@import "variables";
+
+@mixin BUTTON($color: #fff, $bgColor: $black, $borderColor: $black, $focusBorderColor: #000) {
+  color: $color;
+  background-color: $bgColor;
+  min-width: 15vw;
+  border-radius: 0;
+  height: 53px;
+  outline: none;
+  border: 1px solid $borderColor;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    color: lighten($color, 5%);
+    background-color: lighten($bgColor, 7%);
+    text-decoration: none;
+    outline: none;
+    border-color: lighten($borderColor, 5%);
+  }
+  &:active,
+  &:focus {
+    color: lighten($color, 5%);
+    background-color: lighten($bgColor, 5%);
+    text-decoration: none;
+    outline: 1px dashed #000;
+    outline-offset: 3px;
+    border-color: $focusBorderColor;
+  }
+}
