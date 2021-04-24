@@ -14,21 +14,17 @@
 <body>
 
 <nav>
-    <div class="topnav" id="myTopnav">
-        <a href=""#>           
+    <div class="topnav" id="topnav">
+        <a href=""# class="topnav-logo-icon">           
             <img src="./assets/icon.png" alt="logo" width="80" height="30">
         </a>
-        <div>
+        <div class="topnav-items">
           <a href="#art" class="active">Art</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
-          <a class="cart-icon" href=""#>Cart <span class="cart-icon-count">2</span></a>
-        
-          <a href="#" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>        
+        <a class="topnav-cart-icon" href=""#>Cart <span class="cart-icon-count">2</span></a>        
+    </div>        
 </nav>
 
 <section>
@@ -49,17 +45,17 @@
                 </select>
                 <div class="solitude-select-wrapper">
                     <label class="solitude-select-label"><b>Do you want it framed?</b></label><br>
-                    <input type="radio" id="yes" name="choice" value="yes">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="choice" value="no">
-                    <label for="no">No</label>
+                    <input type="radio" id="framed-yes" name="framed-choice" value="yes">
+                    <label for="framed-yes">Yes</label>
+                    <input type="radio" id="framed-no" name="framed-choice" value="no">
+                    <label for="framed-no">No</label>
                  </div>
                  <div class="solitude-select-wrapper">
                     <label class="solitude-select-label"><b>Select type</b></label><br>
-                    <input type="radio" id="yes" name="choice" value="yes">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="choice" value="no">
-                    <label for="no">No</label>
+                    <input type="radio" id="type-yes" name="type-choice" value="yes">
+                    <label for="type-yes">Yes</label>
+                    <input type="radio" id="type-no" name="type-choice" value="no">
+                    <label for="type-no">No</label>
                 </div>          
                 <button class="add-to-cart-button">Add to Cart</button>
             </form>

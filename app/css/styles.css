@@ -36,9 +36,9 @@ nav {
         text-decoration: underline; }
     nav .topnav .icon {
       display: none; }
-    nav .topnav .cart-icon {
+    nav .topnav .topnav-cart-icon {
       display: flex; }
-      nav .topnav .cart-icon .cart-icon-count {
+      nav .topnav .topnav-cart-icon .cart-icon-count {
         background-color: #000000;
         border-radius: 50%;
         color: #fff;
@@ -88,7 +88,7 @@ nav {
         margin-bottom: 10%; }
       .solitude-and-silence-wrapper .solitude-and-silence-details form .select-size {
         height: 60px;
-        width: 290px;
+        width: 60%;
         border-radius: 0; }
     .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-and-silence-title {
       font-family: playfair;
@@ -98,22 +98,49 @@ nav {
       display: inline-block; }
     .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper input[type="radio"] {
       display: none; }
-    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper input[type="radio"] + label:before {
-      content: "";
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:checked,
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px; }
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:checked + label,
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:not(:checked) + label {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: 20px;
       display: inline-block;
-      width: 15px;
-      height: 15px;
-      padding: 3px;
-      margin-right: 5px;
-      background-clip: content-box;
-      border: 1px solid #bbbbbb;
-      background-color: #e7e6e7;
-      border-radius: 50%; }
-    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper input[type="radio"]:checked {
-      background-color: #000000; }
-    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper label {
-      display: inline-flex;
-      align-items: center; }
+      color: #666; }
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:checked + label:before,
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #ddd;
+      border-radius: 100%;
+      background: #fff; }
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:checked + label:after,
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #000000;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0); }
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1); }
     .solitude-and-silence-wrapper .solitude-and-silence-details .read-more-link {
       color: #000000; }
 
@@ -166,7 +193,8 @@ nav {
       align-items: center;
       width: 80%; }
       .painting-wrapper .related-art-wrapper .related-art-details .related-art-subtitle {
-        width: 65%; }
+        width: 65%;
+        font-family: playfair; }
       .painting-wrapper .related-art-wrapper .related-art-details .related-art-text {
         width: 75%;
         text-align: center; }
@@ -188,7 +216,15 @@ nav {
     .painting-wrapper .featured-one-image,
     .painting-wrapper .related-art-wrapper, .painting-wrapper .related-art-wrapper > .related-art-details, .painting-wrapper .related-art-wrapper > .art-img-wrapper {
       width: 100%; }
+  .solitude-and-silence-wrapper {
+    width: 100%; }
   .featured-wrapper .feature-text {
     padding-left: 0; }
   .featured-one-text .feature-one-para {
     margin: 0; } }
+
+@media (max-width: 434px) {
+  .topnav .topnav-logo-icon {
+    display: none; }
+  .topnav .topnav-items > a {
+    padding: 14px 8px; } }

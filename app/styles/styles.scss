@@ -38,7 +38,7 @@ nav {
         .icon {
             display: none;
         }
-        .cart-icon {
+        .topnav-cart-icon {
             display: flex;
             .cart-icon-count {
                 background-color: $black;
@@ -79,7 +79,7 @@ nav {
             }
             .select-size {
                 height: 60px;
-                width: 290px;
+                width: 60%;
                 border-radius: 0;
             }
         }
@@ -89,9 +89,7 @@ nav {
             font-weight: 300;
         }
         
-        .solitude-select-wrapper {
-
-        
+        .solitude-select-wrapper {       
         .solitude-select-label {
             margin-bottom: 10px;
             display: inline-block;
@@ -100,26 +98,57 @@ nav {
                 display: none;
             }
             
-            input[type="radio"] + label:before {
-                content: "";
-                display: inline-block;
-                width: 15px;
-                height: 15px;
-                padding: 3px;
-                margin-right: 5px;
-                background-clip: content-box;
-                border: 1px solid #bbbbbb;
-                background-color: #e7e6e7;
-                border-radius: 50%;
-            }
             
-            input[type="radio"]:checked  {
-                background-color: $black;
-            }
-            label {
-                display: inline-flex;
-                align-items: center;
-              }
+            [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label
+        {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: $black;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
               
         }
         .read-more-link {
@@ -189,6 +218,7 @@ nav {
             width: 80%;
             .related-art-subtitle {
                 width: 65%;
+                font-family: playfair;
             }
             .related-art-text {
                 width: 75%;
@@ -210,10 +240,23 @@ nav {
             width: 100%;
         }
     }
+    .solitude-and-silence-wrapper {
+        width: 100%;
+    }
     .featured-wrapper .feature-text {
         padding-left: 0;
     }
     .featured-one-text .feature-one-para {
         margin: 0;
+    }
+}
+@media (max-width: 434px) {
+    .topnav {
+        .topnav-logo-icon {
+            display: none;
+        }
+        .topnav-items > a {
+            padding: 14px 8px;
+        }
     }
 }
