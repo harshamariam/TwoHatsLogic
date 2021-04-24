@@ -12,7 +12,7 @@ body {
 section {
   padding: 1%; }
   section > * {
-    margin-bottom: 100px; }
+    margin-bottom: 50px; }
 
 nav {
   height: 60px; }
@@ -24,14 +24,14 @@ nav {
     nav .topnav a {
       float: left;
       display: block;
-      color: black;
+      color: #000000;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px; }
       nav .topnav a:hover {
         background-color: #ddd;
-        color: black; }
+        color: #000000; }
       nav .topnav a.active {
         text-decoration: underline; }
     nav .topnav .icon {
@@ -50,7 +50,7 @@ nav {
 .add-to-cart-button {
   color: #fff;
   background-color: #000000;
-  min-width: 15vw;
+  min-width: 61%;
   border-radius: 0;
   height: 53px;
   outline: none;
@@ -83,16 +83,21 @@ nav {
     .solitude-and-silence-wrapper .solitude-and-silence-details > * {
       padding-bottom: 2%; }
     .solitude-and-silence-wrapper .solitude-and-silence-details form {
-      margin-top: 10%; }
+      margin-top: 7%; }
       .solitude-and-silence-wrapper .solitude-and-silence-details form > * {
-        margin-bottom: 10%; }
+        margin-bottom: 5%; }
       .solitude-and-silence-wrapper .solitude-and-silence-details form .select-size {
         height: 60px;
         width: 60%;
-        border-radius: 0; }
+        border-radius: 0;
+        padding: 0 3%;
+        margin-top: 7px; }
     .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-and-silence-title {
       font-family: playfair;
-      font-weight: 300; }
+      font-weight: 300;
+      font-size: 1.75em; }
+    .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-and-silence-text > b {
+      padding-right: 10px; }
     .solitude-and-silence-wrapper .solitude-and-silence-details .solitude-select-wrapper .solitude-select-label {
       margin-bottom: 10px;
       display: inline-block; }
@@ -142,7 +147,11 @@ nav {
       -webkit-transform: scale(1);
       transform: scale(1); }
     .solitude-and-silence-wrapper .solitude-and-silence-details .read-more-link {
-      color: #000000; }
+      color: #000000;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+      padding-bottom: 0px; }
 
 .featured-wrapper {
   display: flex; }
@@ -175,32 +184,88 @@ nav {
 
 .painting-wrapper {
   display: flex;
-  justify-content: center; }
+  justify-content: space-around;
+  margin: 0 80px 40px; }
   .painting-wrapper .related-art-wrapper {
     width: 30%; }
     .painting-wrapper .related-art-wrapper .art-img-wrapper {
-      background: #f5f5f5;
-      width: 85%;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 350px; }
+      align-items: center; }
       .painting-wrapper .related-art-wrapper .art-img-wrapper > img {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+        padding: 10%;
+        background: #f5f5f5;
+        box-sizing: border-box; }
     .painting-wrapper .related-art-wrapper .related-art-details {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 80%; }
+      align-items: center; }
       .painting-wrapper .related-art-wrapper .related-art-details .related-art-subtitle {
-        width: 65%;
         font-family: playfair; }
       .painting-wrapper .related-art-wrapper .related-art-details .related-art-text {
-        width: 75%;
+        width: 65%;
         text-align: center; }
 
+hr {
+  width: 85%;
+  border: 1px solid #f2f2f2; }
+
+.footer-section-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 80px 100px;
+  font-family: playfair; }
+  .footer-section-wrapper .footer-wrapper {
+    width: 30%;
+    text-align: center; }
+    .footer-section-wrapper .footer-wrapper.contact-footer-wrapper, .footer-section-wrapper .footer-wrapper.subscribe-footer-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .footer-section-wrapper .footer-wrapper > h2 {
+      font-weight: 400; }
+    .footer-section-wrapper .footer-wrapper .followme-footer-title {
+      margin-bottom: 1.5em; }
+    .footer-section-wrapper .footer-wrapper .followme-footer-text {
+      padding: 0 3%; }
+    .footer-section-wrapper .footer-wrapper .footer-text {
+      width: 80%;
+      font-family: opensans; }
+    .footer-section-wrapper .footer-wrapper .subscribe-footer-email {
+      width: 100%;
+      position: relative;
+      padding-left: 5%; }
+      .footer-section-wrapper .footer-wrapper .subscribe-footer-email input {
+        border: none;
+        width: 100%;
+        height: 50px;
+        box-shadow: 0 8px 4px -8px #000000;
+        padding-left: 12px; }
+        .footer-section-wrapper .footer-wrapper .subscribe-footer-email input:active, .footer-section-wrapper .footer-wrapper .subscribe-footer-email input:focus {
+          outline: none; }
+      .footer-section-wrapper .footer-wrapper .subscribe-footer-email .subscribe-footer-arrow {
+        width: 30px;
+        height: 27px;
+        background-image: url(../assets/arrow.png);
+        background-size: contain;
+        background-position: center;
+        display: inline-block;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 15px;
+        top: 13px; }
+
+.copyright-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 100px;
+  opacity: 0.5; }
+
 @media (max-width: 991px) {
-  .solitude-and-silence-wrapper, .featured-wrapper, .painting-wrapper {
+  .solitude-and-silence-wrapper, .featured-wrapper, .painting-wrapper,
+  .footer-section-wrapper, .copyright-wrapper {
     flex-wrap: wrap; }
     .solitude-and-silence-wrapper .solitude-and-silence-image,
     .solitude-and-silence-wrapper .solitude-and-silence-image > img, .solitude-and-silence-wrapper .featured-one-text,
@@ -214,7 +279,20 @@ nav {
     .painting-wrapper .solitude-and-silence-image > img, .painting-wrapper .featured-one-text,
     .painting-wrapper .fetaured-one-title, .painting-wrapper .solitude-and-silence-details,
     .painting-wrapper .featured-one-image,
-    .painting-wrapper .related-art-wrapper, .painting-wrapper .related-art-wrapper > .related-art-details, .painting-wrapper .related-art-wrapper > .art-img-wrapper {
+    .painting-wrapper .related-art-wrapper, .painting-wrapper .related-art-wrapper > .related-art-details, .painting-wrapper .related-art-wrapper > .art-img-wrapper,
+    .footer-section-wrapper .solitude-and-silence-image,
+    .footer-section-wrapper .solitude-and-silence-image > img,
+    .footer-section-wrapper .featured-one-text,
+    .footer-section-wrapper .fetaured-one-title,
+    .footer-section-wrapper .solitude-and-silence-details,
+    .footer-section-wrapper .featured-one-image,
+    .footer-section-wrapper .related-art-wrapper,
+    .footer-section-wrapper .related-art-wrapper > .related-art-details,
+    .footer-section-wrapper .related-art-wrapper > .art-img-wrapper, .copyright-wrapper .solitude-and-silence-image,
+    .copyright-wrapper .solitude-and-silence-image > img, .copyright-wrapper .featured-one-text,
+    .copyright-wrapper .fetaured-one-title, .copyright-wrapper .solitude-and-silence-details,
+    .copyright-wrapper .featured-one-image,
+    .copyright-wrapper .related-art-wrapper, .copyright-wrapper .related-art-wrapper > .related-art-details, .copyright-wrapper .related-art-wrapper > .art-img-wrapper {
       width: 100%; }
   .solitude-and-silence-wrapper {
     width: 100%; }
@@ -222,6 +300,14 @@ nav {
     padding-left: 0; }
   .featured-one-text .feature-one-para {
     margin: 0; } }
+
+@media (max-width: 768px) {
+  .footer-section-wrapper .footer-wrapper {
+    width: 100%;
+    margin-bottom: 50px; }
+  .copyright-wrapper {
+    width: 100%;
+    margin: 50px 0; } }
 
 @media (max-width: 434px) {
   .topnav .topnav-logo-icon {

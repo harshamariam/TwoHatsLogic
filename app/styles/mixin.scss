@@ -3,7 +3,7 @@
 @mixin BUTTON($color: #fff, $bgColor: $black, $borderColor: $black, $focusBorderColor: #000) {
   color: $color;
   background-color: $bgColor;
-  min-width: 15vw;
+  min-width: 61%;
   border-radius: 0;
   height: 53px;
   outline: none;
